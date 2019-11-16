@@ -1943,7 +1943,7 @@ html.device-full-viewport,html.device-full-viewport body {
 }
 
 .tabbar .tab-link-active,.tabbar-labels .tab-link-active {
-    color: #ffffff;
+    color: #007aff;
 }
 
 .tabbar i.icon,.tabbar-labels i.icon {
