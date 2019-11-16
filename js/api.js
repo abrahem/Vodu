@@ -4,11 +4,11 @@ document.getElementById("sld2").setAttribute("style","background-image: url('htt
 document.getElementById("sld3").setAttribute("style","background-image: url('http://cinema.nx-iq.com/"+data["featured"][2].large+"')");
 document.getElementById("sld4").setAttribute("style","background-image: url('http://cinema.nx-iq.com/"+data["featured"][3].large+"')");
 document.getElementById("sld5").setAttribute("style","background-image: url('http://cinema.nx-iq.com/"+data["featured"][4].large+"')");
-document.getElementById("sld1").setAttribute("style","background-size: 100%; background-position: center;");
-document.getElementById("sld2").setAttribute("style","background-size: 100%; background-position: center;");
-document.getElementById("sld3").setAttribute("style","background-size: 100%; background-position: center;");
-document.getElementById("sld4").setAttribute("style","background-size: 100%; background-position: center;");
-document.getElementById("sld5").setAttribute("style","background-size: 100%; background-position: center;");
+document.getElementById("sld1").setAttribute("style","background-size: 100%; background-position: center; border: 100px;");
+document.getElementById("sld2").setAttribute("style","background-size: 100%; background-position: center; border: 100px;");
+document.getElementById("sld3").setAttribute("style","background-size: 100%; background-position: center; border: 100px;");
+document.getElementById("sld4").setAttribute("style","background-size: 100%; background-position: center; border: 100px;");
+document.getElementById("sld5").setAttribute("style","background-size: 100%; background-position: center; border: 100px;");
 
 
 
