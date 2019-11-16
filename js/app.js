@@ -62,12 +62,14 @@ $$('.view').addClass('theme-dark');
 $$('.toolbar-bottom').addClass('theme-dark');
 $$('.toggle input').on('change', function () {
   if (this.checked) {
+    $$('.view').removeClass('color-theme-white');
     $$('.view').removeClass('theme-dark');
-    document.getElementById('#theme-state').setAttribute("content","#ffffff")
+    document.getElementById('theme-state').setAttribute("content","#ffffff")
     $$('.toolbar-bottom').removeClass('theme-dark');
   } else {
+    $$('.view').addClass('color-theme-white');
     $$('.view').addClass('theme-dark');
-    document.getElementById('#theme-state').setAttribute("content","#000000")
+    document.getElementById('theme-state').setAttribute("content","#000000")
     $$('.toolbar-bottom').addClass('theme-dark');
   }
 });
