@@ -43,7 +43,6 @@ var app  = new Framework7({
   // App routes
   routes: routes,
 });
-$$('.toggle input').click();
 // Init/Create views
 var homeView = app.views.create('#view-home', {
   url: '/'
