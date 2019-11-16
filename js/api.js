@@ -4,3 +4,9 @@ document.getElementById("sld2").setAttribute("style","background-size: 100%; bac
 document.getElementById("sld3").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('http://cinema.nx-iq.com/"+data["featured"][2].large+"')");
 document.getElementById("sld4").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('http://cinema.nx-iq.com/"+data["featured"][3].large+"')");
 document.getElementById("sld5").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('http://cinema.nx-iq.com/"+data["featured"][4].large+"')");
+
+document.getElementById("txt1").innerText = data["featured"][0].title;
+document.getElementById("txt2").innerText = data["featured"][1].title;
+document.getElementById("txt3").innerText = data["featured"][2].title;
+document.getElementById("txt4").innerText = data["featured"][3].title;
+document.getElementById("txt5").innerText = data["featured"][4].title;
