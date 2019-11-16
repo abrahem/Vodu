@@ -50,6 +50,9 @@ var homeView = app.views.create('#view-home', {
 var catalogView = app.views.create('#view-catalog', {
   url: '/catalog/'
 });
+var catalogViews = app.views.create('#view-catalogs', {
+  url: '/catalogs/'
+});
 var settingsView = app.views.create('#view-settings', {
   url: '/settings/'
 });
