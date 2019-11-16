@@ -65,8 +65,6 @@ $$('.toggle input').on('change', function () {
     $$('.view').removeClass('theme-dark');
     $$('.toolbar-bottom').removeClass('theme-dark');
   } else {
-    $$('.view').removeClass('theme-anime');
-    $$('.toolbar-bottom').removeClass('theme-anime');
     $$('.view').addClass('theme-dark');
     $$('.toolbar-bottom').addClass('theme-dark');
   }
