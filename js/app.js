@@ -60,13 +60,10 @@ var settingsView = app.views.create('#view-settings', {
 $$('.view').addClass('color-theme-white');
 $$('.view').addClass('theme-dark');
 $$('.toolbar-bottom').addClass('theme-dark');
-
 $$('.toggle input').on('change', function () {
   if (this.checked) {
     $$('.view').removeClass('theme-dark');
     $$('.toolbar-bottom').removeClass('theme-dark');
-    $$('.view').addClass('theme-anime');
-    $$('.toolbar-bottom').addClass('theme-anime');
   } else {
     $$('.view').removeClass('theme-anime');
     $$('.toolbar-bottom').removeClass('theme-anime');
