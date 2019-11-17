@@ -69,7 +69,7 @@ $$('.toggle input').on('change', function () {
   if (this.checked) {
     $$('.view').removeClass('color-theme-white');
     $$('.view').removeClass('theme-dark');
-    app.statusbar.setBackgroundColor("#ffffff");
+    app.statusbar.setBackgroundColor("#f7f7f8");
     document.getElementById('theme-state').setAttribute("content","#ffffff")
     $$('.toolbar-bottom').removeClass('theme-dark');
   } else {
