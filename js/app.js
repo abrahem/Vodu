@@ -4,9 +4,9 @@ var $$ = Dom7;
 // Framework7 App main instance
 var app  = new Framework7({
   root: '#app', // App root element
-  id: 'io.framework7.testapp', // App bundle ID
-  name: 'Framework7', // App name
-  theme: 'auto', // Automatic theme detection
+  id: 'com.snoanime.c', // App bundle ID
+  name: 'SnoAnimeX', // App name
+  theme: 'md', // Automatic theme detection
   // App root data
   data: function () {
     return {
@@ -56,7 +56,7 @@ var catalogViews = app.views.create('#view-catalogs', {
 var settingsView = app.views.create('#view-settings', {
   url: '/settings/'
 });
-document.getElementById("htmls").addClass = "with-statusbar";
+document.getElementById("htmls").setAttribute("class",document.getElementById("htmls").className+" with-statusbar");
 $$('.view').addClass('color-theme-white');
 $$('.view').addClass('theme-dark');
 $$('.toolbar-bottom').addClass('theme-dark');
