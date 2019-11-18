@@ -34,9 +34,6 @@ var app  = new Framework7({
       ]
     };
   }, 
-  statusbar: {
-    androidOverlaysWebView: true,
-  },
   // App root methods
   methods: {
     helloWorld: function () {
@@ -62,8 +59,6 @@ var settingsView = app.views.create('#view-settings', {
 
 $$('.view').addClass('color-theme-white');
 $$('.view').addClass('theme-dark');
-app.statusbar.setBackgroundColor("#171717");
-app.statusbar.show(); 
 $$('.toolbar-bottom').addClass('theme-dark');
 $$('.toggle input').on('change', function () {
   if (this.checked) {
