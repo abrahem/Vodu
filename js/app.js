@@ -35,7 +35,7 @@ var app  = new Framework7({
     };
   }, 
   statusbar: {
-    iosOverlaysWebView: true,
+    androidOverlaysWebView: true,
   },
   // App root methods
   methods: {
