@@ -56,7 +56,7 @@ var catalogViews = app.views.create('#view-catalogs', {
 var settingsView = app.views.create('#view-settings', {
   url: '/settings/'
 });
-
+document.getElementById("htmls").addClass = "with-statusbar";
 $$('.view').addClass('color-theme-white');
 $$('.view').addClass('theme-dark');
 $$('.toolbar-bottom').addClass('theme-dark');
