@@ -4,9 +4,9 @@ var $$ = Dom7;
 // Framework7 App main instance
 var app  = new Framework7({
   root: '#app', // App root element
-  id: 'com.snoanime.c', // App bundle ID
-  name: 'SnoAnimeX', // App name
-  theme: 'md', // Automatic theme detection
+  id: 'io.framework7.testapp', // App bundle ID
+  name: 'Framework7', // App name
+  theme: 'auto', // Automatic theme detection
   // App root data
   data: function () {
     return {
@@ -34,6 +34,9 @@ var app  = new Framework7({
       ]
     };
   }, 
+  statusbar: {
+    iosOverlaysWebView: true,
+  },
   // App root methods
   methods: {
     helloWorld: function () {
@@ -56,21 +59,23 @@ var catalogViews = app.views.create('#view-catalogs', {
 var settingsView = app.views.create('#view-settings', {
   url: '/settings/'
 });
+
 $$('.view').addClass('color-theme-white');
 $$('.view').addClass('theme-dark');
+app.statusbar.setBackgroundColor("#171717");
+app.statusbar.show(); 
 $$('.toolbar-bottom').addClass('theme-dark');
 $$('.toggle input').on('change', function () {
   if (this.checked) {
     $$('.view').removeClass('color-theme-white');
     $$('.view').removeClass('theme-dark');
-    document.getElementsByClassName("bars").setAttribute("style","background-color: #f7f7f8")
+    app.statusbar.setBackgroundColor("#f7f7f8");
     document.getElementById('theme-state').setAttribute("content","#ffffff")
     $$('.toolbar-bottom').removeClass('theme-dark');
   } else {
     $$('.view').addClass('color-theme-white');
     $$('.view').addClass('theme-dark');
     app.statusbar.setBackgroundColor("#171717");
-    document.getElementsByClassName("bars").setAttribute("style","background-color: #171717")
     document.getElementById('theme-state').setAttribute("content","#000000")
     $$('.toolbar-bottom').addClass('theme-dark');
   }
