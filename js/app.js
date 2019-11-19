@@ -56,7 +56,11 @@ var catalogViews = app.views.create('#view-catalogs', {
 var settingsView = app.views.create('#view-settings', {
   url: '/settings/'
 });
-
+    app.statusbar.hide();
+    $$('.view').removeClass('color-theme-white');
+    $$('.view').removeClass('theme-dark');
+    document.getElementById('theme-state').setAttribute("content","#ffffff")
+    $$('.toolbar-bottom').removeClass('theme-dark');
 $$('.toggle input').on('change', function () {
   if (this.checked) {
     $$('.view').addClass('color-theme-white');
