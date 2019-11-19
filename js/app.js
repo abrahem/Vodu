@@ -62,15 +62,15 @@ var settingsView = app.views.create('#view-settings', {
 
 $$('.toggle input').on('change', function () {
   if (this.checked) {
-    $$('.view').removeClass('color-theme-white');
-    $$('.view').removeClass('theme-dark');
-    document.getElementById('theme-state').setAttribute("content","#ffffff")
-    $$('.toolbar-bottom').removeClass('theme-dark');
-  } else {
     $$('.view').addClass('color-theme-white');
     $$('.view').addClass('theme-dark');
     document.getElementById('theme-state').setAttribute("content","#000000")
     $$('.toolbar-bottom').addClass('theme-dark');
+  } else {
+    $$('.view').removeClass('color-theme-white');
+    $$('.view').removeClass('theme-dark');
+    document.getElementById('theme-state').setAttribute("content","#ffffff")
+    $$('.toolbar-bottom').removeClass('theme-dark');
   }
 });
 
