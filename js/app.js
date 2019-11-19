@@ -60,9 +60,6 @@ var settingsView = app.views.create('#view-settings', {
   url: '/settings/'
 });
 
-$$('.view').addClass('color-theme-white');
-$$('.view').addClass('theme-dark');
-$$('.toolbar-bottom').addClass('theme-dark');
 $$('.toggle input').on('change', function () {
   if (this.checked) {
     $$('.view').removeClass('color-theme-white');
