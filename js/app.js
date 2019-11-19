@@ -34,9 +34,6 @@ var app  = new Framework7({
       ]
     };
   }, 
-  statusbar: {
-    iosOverlaysWebView: true,
-  },
   // App root methods
   methods: {
     helloWorld: function () {
