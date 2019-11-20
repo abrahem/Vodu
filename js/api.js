@@ -54,11 +54,11 @@ for (i = 0; i < data[0]["1"].length; i++) {
     var n = navigator.userAgent.includes("Windows");
     if (n == true) {
         one.style = "--f7-cols-per-row: 9;";
+        img.style = "height: 150px; border-radius: 5px;";
     } else {
-
+        img.style = "height: 200px; border-radius: 5px;";
     }
     img.src = "https://media.gmanga.me/uploads/manga/cover/"+data[0]["1"][i]["manga"].id+"/large_"+data[0]["1"][i]["manga"].cover+"";
-    img.style = "height: 180px; border-radius: 5px;";
     img.setAttribute("width","100%");
     fif.appendChild(img);
     fif.appendChild(div2);
@@ -101,11 +101,12 @@ for (ii = 0; ii < data[1]["2"].length; ii++) {
     var n = navigator.userAgent.includes("Windows");
     if (n == true) {
         one.style = "--f7-cols-per-row: 9;";
+        img.style = "height: 150px; border-radius: 5px;";
     } else {
-
+        img.style = "height: 200px; border-radius: 5px;";
     }
     img.src = "https://media.gmanga.me/uploads/manga/cover/"+data[1]["2"][ii]["manga"].id+"/large_"+data[1]["2"][ii]["manga"].cover+"";
-    img.style = "height: 180px; border-radius: 5px;";
+    img.style = "height: 200px; border-radius: 5px;";
     img.setAttribute("width","100%");
     fif.appendChild(img);
     fif.appendChild(div2);
