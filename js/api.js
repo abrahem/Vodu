@@ -37,7 +37,7 @@ for (i = 0; i < data[0]["1"].length; i++) {
     var img = document.createElement("img");
     fif.style = "position: relative;"
     fr.style = "width: 100%; text-align: -webkit-center;"
-    spn.style = "font-size:12px; font-weight: 600;font-style: normal;font-variant: small-caps;"
+    spn.style = "padding-bottom: 5px; font-size:12px; font-weight: 600;font-style: normal;font-variant: small-caps;"
     spn.className = "text";
     if (data[0]["1"][i]["new_chapters"].length === 0) {
         spn.innerText = data[0]["1"][i]["manga"].title;
@@ -85,7 +85,7 @@ for (ii = 0; ii < data[1]["2"].length; ii++) {
     fif.style = "position: relative;"
     fr.style = "width: 100%; text-align: -webkit-center;"
     spn.className = "text";
-    spn.style = "font-size:12px; font-weight: 600;font-style: normal;font-variant: small-caps;"
+    spn.style = "padding-bottom: 5px; font-size:12px; font-weight: 600;font-style: normal;font-variant: small-caps;"
     if (data[1]["2"][ii]["new_chapters"].length === 0) {
         spn.innerText = data[1]["2"][ii]["manga"].title;
         div2.innerText = data[1]["2"][ii]["new_releases"][0].chapter;
