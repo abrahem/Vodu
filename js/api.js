@@ -25,12 +25,14 @@ var i;
 for (i = 0; i < data[0]["1"].length; i++) {
     var one = document.createElement("div");
     one.className = "col-50 medium-25";
+    one.innerText = "This Element"+i;
     list.appendChild(one);
 }
 var ii;
 for (ii = 0; ii < data[1]["2"].length; ii++) {
     var one = document.createElement("div");
     one.className = "col-50 medium-25";
+    one.innerText = "This Element"+ii;
     list.appendChild(one);
 }
 });
