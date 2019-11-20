@@ -44,9 +44,9 @@
   text-overflow: ellipsis;
 }
 .lefts {
-  border: 1px solid grey;
+  border: 0px solid #dae0f7;
   padding: 10px;
-  border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-  background-color: grey;
+  background-color: #2196f3c7;
+  font-weight: bold;
 }
