@@ -24,15 +24,43 @@ var list = document.getElementById("mangalist");
 var i;
 for (i = 0; i < data[0]["1"].length; i++) {
     var one = document.createElement("div");
+    var on = document.createElement("div");
+    var to = document.createElement("div");
+    var tr = document.createElement("div");
+    var img = document.createElement("img");
+
+    on.className = "card demo-facebook-card"
+    to.style = "border-radius: 5px;";
+    tr.className = "card-content";
     one.className = "col-50 medium-25";
-    one.innerText = "This Element"+i;
+    img.src = "https://media.gmanga.me/uploads/manga/cover/"+data[1]["2"][i]["manga"].id+"/large_"+data[1]["2"][i]["manga"].cover+"";
+    img.style = "border-radius: 5px;";
+    img.width = "100%";
+    tr.appendChild(img);
+    to.appendChild(tr);
+    on.appendChild(to);
+    one.appendChild(on);
     list.appendChild(one);
 }
 var ii;
 for (ii = 0; ii < data[1]["2"].length; ii++) {
     var one = document.createElement("div");
+    var on = document.createElement("div");
+    var to = document.createElement("div");
+    var tr = document.createElement("div");
+    var img = document.createElement("img");
+    on.className = "card demo-facebook-card"
+    to.style = "border-radius: 5px;";
+    tr.className = "card-content";
     one.className = "col-50 medium-25";
-    one.innerText = "This Element"+ii;
+    img.src = "https://media.gmanga.me/uploads/manga/cover/"+data[1]["2"][ii]["manga"].id+"/large_"+data[1]["2"][ii]["manga"].cover+"";
+    img.style = "border-radius: 5px;";
+    img.width = "100%";
+    tr.appendChild(img);
+    to.appendChild(tr);
+    on.appendChild(to);
+    one.appendChild(on);
     list.appendChild(one);
 }
 });
+
