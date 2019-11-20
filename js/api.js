@@ -1,4 +1,4 @@
-app.request.json('http://snoanime.com/manga/main.php', function (data) {
+app.request.json('https://snoanime.com/manga/main.php', function (data) {
 document.getElementById("sld1").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][0]["manga"].id+"/"+data[2]["read"][0]["manga"].cover+"')");
 document.getElementById("sld2").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][1]["manga"].id+"/"+data[2]["read"][1]["manga"].cover+"')");
 document.getElementById("sld3").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][2]["manga"].id+"/"+data[2]["read"][2]["manga"].cover+"')");
