@@ -33,6 +33,7 @@ for (i = 0; i < data[0]["1"].length; i++) {
     var img = document.createElement("img");
     fr.style = "width: 100%; text-align: -webkit-center;"
     spn.style = "font-weight: 600;font-style: normal;font-variant: small-caps;"
+    spn.className = "text";
     if (data[0]["1"][i]["new_chapters"].length === 0) {
         spn.innerText = data[0]["1"][i]["manga"].title + " " + data[0]["1"][i]["new_releases"][0].chapter;
     } else {
@@ -63,6 +64,7 @@ for (ii = 0; ii < data[1]["2"].length; ii++) {
     var spn = document.createElement("span");
     var img = document.createElement("img");
     fr.style = "width: 100%; text-align: -webkit-center;"
+    spn.className = "text";
     spn.style = "font-weight: 600;font-style: normal;font-variant: small-caps;"
     if (data[1]["2"][ii]["new_chapters"].length === 0) {
         spn.innerText = data[1]["2"][ii]["manga"].title + " " + data[1]["2"][ii]["new_releases"][0].chapter;

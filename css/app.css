@@ -36,3 +36,11 @@
   font-feature-settings: "liga";
   text-align: center;
 }
+
+.text {
+  display: block;
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
