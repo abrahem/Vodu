@@ -28,16 +28,22 @@ for (i = 0; i < data[0]["1"].length; i++) {
     var on = document.createElement("div");
     var to = document.createElement("div");
     var tr = document.createElement("div");
+    var div2 = document.createElement("div");
+    div2.style = "position: absolute;top: 10px;right: 3px;";
     var fr = document.createElement("div");
+    var fif = document.createElement("div");
     var spn = document.createElement("span");
     var img = document.createElement("img");
+    fif.style = "position: relative;"
     fr.style = "width: 100%; text-align: -webkit-center;"
-    spn.style = "font-weight: 600;font-style: normal;font-variant: small-caps;"
+    spn.style = "font-size:12px; font-weight: 600;font-style: normal;font-variant: small-caps;"
     spn.className = "text";
     if (data[0]["1"][i]["new_chapters"].length === 0) {
-        spn.innerText = data[0]["1"][i]["manga"].title + " " + data[0]["1"][i]["new_releases"][0].chapter;
+        spn.innerText = data[0]["1"][i]["manga"].title;
+        div2.innerText = data[0]["1"][i]["new_releases"][0].chapter;
     } else {
-        spn.innerText = data[0]["1"][i]["manga"].title + " " + data[0]["1"][i]["new_chapters"][0].chapter;
+        spn.innerText = data[0]["1"][i]["manga"].title;
+        div2.innerText = data[0]["1"][i]["new_chapters"][0].chapter;
     }
     fr.appendChild(spn);
     on.className = "card demo-facebook-card"
@@ -47,7 +53,9 @@ for (i = 0; i < data[0]["1"].length; i++) {
     img.src = "https://media.gmanga.me/uploads/manga/cover/"+data[0]["1"][i]["manga"].id+"/large_"+data[0]["1"][i]["manga"].cover+"";
     img.style = "height: 150px; border-radius: 5px;";
     img.setAttribute("width","100%");
-    tr.appendChild(img);
+    fif.appendChild(img);
+    fif.appendChild(div2);
+    tr.appendChild(fif);
     tr.appendChild(fr);
     to.appendChild(tr);
     on.appendChild(to);
@@ -63,14 +71,21 @@ for (ii = 0; ii < data[1]["2"].length; ii++) {
     var fr = document.createElement("div");
     var spn = document.createElement("span");
     var img = document.createElement("img");
+    var fif = document.createElement("div");
+    var div2 = document.createElement("div");
+    div2.style = "position: absolute;top: 10px;right: 3px;";
+    fif.style = "position: relative;"
     fr.style = "width: 100%; text-align: -webkit-center;"
     spn.className = "text";
-    spn.style = "font-weight: 600;font-style: normal;font-variant: small-caps;"
+    spn.style = "font-size:12px; font-weight: 600;font-style: normal;font-variant: small-caps;"
     if (data[1]["2"][ii]["new_chapters"].length === 0) {
-        spn.innerText = data[1]["2"][ii]["manga"].title + " " + data[1]["2"][ii]["new_releases"][0].chapter;
+        spn.innerText = data[1]["2"][ii]["manga"].title;
+        div2.innerText = data[1]["2"][ii]["new_chapters"][0].chapter;
     } else {
-        spn.innerText = data[1]["2"][ii]["manga"].title + " " + data[1]["2"][ii]["new_chapters"][0].chapter;
-    }    fr.appendChild(spn);
+        spn.innerText = data[1]["2"][ii]["manga"].title;
+        div2.innerText = data[1]["2"][ii]["new_chapters"][0].chapter;
+    }
+    fr.appendChild(spn);
     on.className = "card demo-facebook-card"
     to.style = "border-radius: 5px;";
     tr.className = "card-content";
@@ -78,7 +93,9 @@ for (ii = 0; ii < data[1]["2"].length; ii++) {
     img.src = "https://media.gmanga.me/uploads/manga/cover/"+data[1]["2"][ii]["manga"].id+"/large_"+data[1]["2"][ii]["manga"].cover+"";
     img.style = "height: 150px; border-radius: 5px;";
     img.setAttribute("width","100%");
-    tr.appendChild(img);
+    fif.appendChild(img);
+    fif.appendChild(div2);
+    tr.appendChild(fif);
     tr.appendChild(fr);
     to.appendChild(tr);
     on.appendChild(to);

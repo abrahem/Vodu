@@ -9,7 +9,6 @@
   font-family: 'Framework7 Icons';
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Framework7Icons-Regular.eot");
   src: url("../fonts/Framework7Icons-Regular.woff2") format("woff2"),
        url("../fonts/Framework7Icons-Regular.woff") format("woff"),
        url("../fonts/Framework7Icons-Regular.ttf") format("truetype");
@@ -43,4 +42,11 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.lefts {
+  border: 1px solid grey;
+  padding: 10px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: grey;
 }
