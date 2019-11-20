@@ -80,7 +80,7 @@ for (ii = 0; ii < data[1]["2"].length; ii++) {
     spn.style = "font-size:12px; font-weight: 600;font-style: normal;font-variant: small-caps;"
     if (data[1]["2"][ii]["new_chapters"].length === 0) {
         spn.innerText = data[1]["2"][ii]["manga"].title;
-        div2.innerText = data[1]["2"][ii]["new_chapters"][0].chapter;
+        div2.innerText = data[1]["2"][ii]["new_releases"][0].chapter;
     } else {
         spn.innerText = data[1]["2"][ii]["manga"].title;
         div2.innerText = data[1]["2"][ii]["new_chapters"][0].chapter;
