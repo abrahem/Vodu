@@ -19,4 +19,18 @@ document.getElementById("txt7").innerText = data[2]["read"][6]["manga"].title;
 document.getElementById("txt8").innerText = data[2]["read"][7]["manga"].title;
 document.getElementById("txt9").innerText = data[2]["read"][8]["manga"].title;
 document.getElementById("txt10").innerText = data[2]["read"][9]["manga"].title;
+//mangalist
+var list = document.getElementById("mangalist");
+var i;
+for (i = 0; i < data[0]["1"].length; i++) {
+    var one = document.createElement("div");
+    one.className = "col-50 medium-25";
+    list.appendChild(one);
+}
+var ii;
+for (ii = 0; ii < data[0]["2"].length; ii++) {
+    var one = document.createElement("div");
+    one.className = "col-50 medium-25";
+    list.appendChild(one);
+}
 });
