@@ -1,15 +1,15 @@
 app.preloader.show();
 app.request.json('https://snoanime.com/manga/main.php', function (data) {
-document.getElementById("sld1").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][0]["manga"].id+data[2]["read"][0]["manga"].cover+"')");
-document.getElementById("sld2").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][1]["manga"].id+data[2]["read"][1]["manga"].cover+"')");
-document.getElementById("sld3").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][2]["manga"].id+data[2]["read"][2]["manga"].cover+"')");
-document.getElementById("sld4").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][3]["manga"].id+data[2]["read"][3]["manga"].cover+"')");
-document.getElementById("sld5").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][4]["manga"].id+data[2]["read"][4]["manga"].cover+"')");
-document.getElementById("sld6").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][5]["manga"].id+data[2]["read"][5]["manga"].cover+"')");
-document.getElementById("sld7").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][6]["manga"].id+data[2]["read"][6]["manga"].cover+"')");
-document.getElementById("sld8").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][7]["manga"].id+data[2]["read"][7]["manga"].cover+"')");
-document.getElementById("sld9").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][8]["manga"].id+data[2]["read"][8]["manga"].cover+"')");
-document.getElementById("sld10").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][9]["manga"].id+data[2]["read"][9]["manga"].cover+"')");
+document.getElementById("sld1").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][0]["manga"].id+"/"+data[2]["read"][0]["manga"].cover+"')");
+document.getElementById("sld2").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][1]["manga"].id+"/"+data[2]["read"][1]["manga"].cover+"')");
+document.getElementById("sld3").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][2]["manga"].id+"/"+data[2]["read"][2]["manga"].cover+"')");
+document.getElementById("sld4").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][3]["manga"].id+"/"+data[2]["read"][3]["manga"].cover+"')");
+document.getElementById("sld5").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][4]["manga"].id+"/"+data[2]["read"][4]["manga"].cover+"')");
+document.getElementById("sld6").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][5]["manga"].id+"/"+data[2]["read"][5]["manga"].cover+"')");
+document.getElementById("sld7").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][6]["manga"].id+"/"+data[2]["read"][6]["manga"].cover+"')");
+document.getElementById("sld8").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][7]["manga"].id+"/"+data[2]["read"][7]["manga"].cover+"')");
+document.getElementById("sld9").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][8]["manga"].id+"/"+data[2]["read"][8]["manga"].cover+"')");
+document.getElementById("sld10").setAttribute("style","background-size: 100%; background-position: center; border: 100px; background-image: url('https://media.gmanga.me/uploads/manga/cover/"+data[2]["read"][9]["manga"].id+"/"+data[2]["read"][9]["manga"].cover+"')");
 document.getElementById("txt1").innerText = data[2]["read"][0]["manga"].title;
 document.getElementById("txt2").innerText = data[2]["read"][1]["manga"].title;
 document.getElementById("txt3").innerText = data[2]["read"][2]["manga"].title;
@@ -58,7 +58,7 @@ for (i = 0; i < data[0]["1"].length; i++) {
 
     }
     img.src = "https://media.gmanga.me/uploads/manga/cover/"+data[0]["1"][i]["manga"].id+"/large_"+data[0]["1"][i]["manga"].cover+"";
-    img.style = "height: 150px; border-radius: 5px;";
+    img.style = "height: 180px; border-radius: 5px;";
     img.setAttribute("width","100%");
     fif.appendChild(img);
     fif.appendChild(div2);
@@ -105,7 +105,7 @@ for (ii = 0; ii < data[1]["2"].length; ii++) {
 
     }
     img.src = "https://media.gmanga.me/uploads/manga/cover/"+data[1]["2"][ii]["manga"].id+"/large_"+data[1]["2"][ii]["manga"].cover+"";
-    img.style = "height: 150px; border-radius: 5px;";
+    img.style = "height: 180px; border-radius: 5px;";
     img.setAttribute("width","100%");
     fif.appendChild(img);
     fif.appendChild(div2);
