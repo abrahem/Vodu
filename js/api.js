@@ -131,6 +131,7 @@ function info(id) {
         for (i = 0; i < data[0]["genre"].length; i++) {
             on = document.createElement("div");
             on.className = "chip color-blue";
+            on.style = "margin: 3px"
             to = document.createElement("div")
             to.className = "chip-label";
             to.innerText = data[0]["genre"][i].name;
