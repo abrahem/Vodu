@@ -25,7 +25,7 @@ var list = document.getElementById("mangalist");
 var i;
 for (i = 0; i < data[0]["1"].length; i++) {
     var one = document.createElement("div");
-    one.onclick = function() {info(data[0]["1"][i]["manga"].id)}
+    one.setAttribute("onclick",'info('+data[0]["1"][i]["manga"].id+')');
     var on = document.createElement("div");
     var to = document.createElement("div");
     var tr = document.createElement("div");
@@ -73,7 +73,7 @@ for (i = 0; i < data[0]["1"].length; i++) {
 var ii;
 for (ii = 0; ii < data[1]["2"].length; ii++) {
     var one = document.createElement("div");
-    one.onclick = function() {info(data[0]["1"][i]["manga"].id)}
+    one.setAttribute("onclick",'info('+data[1]["2"][i]["manga"].id+')');
     var on = document.createElement("div");
     var to = document.createElement("div");
     var tr = document.createElement("div");
