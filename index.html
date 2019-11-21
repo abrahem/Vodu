@@ -178,12 +178,12 @@ div.ex3 {
           <div class="navbar">
             <div class="navbar-inner sliding">
               <div class="left">
-<a href="#" class="link popup-close">
+<a onclick="clear()" href="#" class="link popup-close">
 <i class="icon icon-back"></i>
 <span class="ios-only">Back</span>
 </a>
 </div>
-              <div class="title">المعلومات</div>
+              <div id="title" class="title"></div>
             </div>
           </div>
           <div class="page-content">
@@ -194,10 +194,12 @@ div.ex3 {
                     <div class="list media-list no-ios-edges">
                       <ul><li class="item-content" style="padding-left: 0px;">
                         <div class="item-media" style="padding-bottom: 0px;padding-top: 0px;">
-                          <img id="images" style="border-bottom-left-radius: 10px; border-top-left-radius: 10px;" class="" width="110" height="150" src="http://www.animestarz.com/animeonline/templates/starzstyle/anime-cover/High_Score_Girl_2.jpg">
+                          <img id="images" style="border-bottom-left-radius: 10px; border-top-left-radius: 10px;" class="" width="110" height="150">
                         </div>
                         <div style="width: 100%;text-align: center;">
-                          <div id="story" class="ex3"><p>تابع للمواسم السابقة</p></div>
+                          <div id="story" class="ex3">
+                            
+                          </div>
                         </div>
                       </li>
                     </ul>
@@ -206,22 +208,20 @@ div.ex3 {
               </a>
             </li>
           </div>
-          <div class="card">
-            <li style="display: inherit;">
-              <a class="">
-                <div class="card-content">
-                  <div class="list media-list no-ios-edges">
-                    <ul><li class="item-content" style="padding-left: 0px;">
-                      <div style="width: 100%;text-align: center;">
-                        <div id="type" style="color:black;font-weight: blod;"><p>تابع للمواسم السابقة</p></div>
-                      </div>
-                    </li>
-                  </ul>
+          <div id="category" class="block block-strong" style="padding-bottom: 4px;padding-top: 4px;padding-left: 5px;padding-right: 5px;margin: 3px;">
+
+          </div>
+            <div class="card">
+              <li style="display: inherit;">
+                <a class="">
+                  <div class="card-content">
+                    <div class="list media-list no-ios-edges" style="height: 30px;">
+                      ///data here
+                  </div>
                 </div>
-              </div>
-            </a>
-          </li>
-        </div>
+              </a>
+            </li>
+            </div>
             <div class="block-header">
             <div class="segmented segmented-strong">
             <a href="#tab-f7" class="button tab-link">التعليقات</a>

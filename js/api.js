@@ -25,6 +25,7 @@ var list = document.getElementById("mangalist");
 var i;
 for (i = 0; i < data[0]["1"].length; i++) {
     var one = document.createElement("div");
+    one.onclick = function() {info(data[0]["1"][i]["manga"].id)}
     var on = document.createElement("div");
     var to = document.createElement("div");
     var tr = document.createElement("div");
@@ -72,6 +73,7 @@ for (i = 0; i < data[0]["1"].length; i++) {
 var ii;
 for (ii = 0; ii < data[1]["2"].length; ii++) {
     var one = document.createElement("div");
+    one.onclick = function() {info(data[0]["1"][i]["manga"].id)}
     var on = document.createElement("div");
     var to = document.createElement("div");
     var tr = document.createElement("div");
@@ -106,7 +108,6 @@ for (ii = 0; ii < data[1]["2"].length; ii++) {
         img.style = "height: 220px; border-radius: 5px;";
     }
     img.src = "https://media.gmanga.me/uploads/manga/cover/"+data[1]["2"][ii]["manga"].id+"/large_"+data[1]["2"][ii]["manga"].cover+"";
-    img.style = "height: 200px; border-radius: 5px;";
     img.setAttribute("width","100%");
     fif.appendChild(img);
     fif.appendChild(div2);
@@ -119,4 +120,31 @@ for (ii = 0; ii < data[1]["2"].length; ii++) {
 }
 app.preloader.hide();
 });
+function info(id) {
+    app.preloader.show();
+    app.request.json('https://snoanime.com/manga/info.php/?id='+id, function (data) {
+        app.popup.open(document.getElementById("my-popup"),false);
+        document.getElementById("images").src = data[0].cover;
+        document.getElementById("story").innerHTML = "<p>"+data[0].story+"</p>"
+        document.getElementById("title").innerText = data[0].title;
+        var i;
+        for (i = 0; i < data[0]["genre"].length; i++) {
+            on = document.createElement("div");
+            on.className = "chip color-blue";
+            to = document.createElement("div")
+            to.className = "chip-label";
+            to.innerText = data[0]["genre"][i].name;
+            on.appendChild(to);
+            document.getElementById("category").appendChild(on);
+        }
+        var ii;
+        for (ii = 0; ii < data[0]["chp"].length; ii++) {
 
+        }
+        app.preloader.hide();
+    })
+}
+function clear() {
+    document.getElementById("my-popup").innerHTML = "";
+    document.getElementById("my-popup").innerHTML = '<div class="view"><div class="page"><div class="navbar"><div class="navbar-inner sliding"><div class="left"><a onclick="clear()" href="#" class="link popup-close"><i class="icon icon-back"></i><span class="ios-only">Back</span></a></div><div id="title" class="title"></div></div></div><div class="page-content"><div class="card"><li style="display: inherit;"><a class=""><div class="card-content"><div class="list media-list no-ios-edges"><ul><li class="item-content" style="padding-left: 0px;"><div class="item-media" style="padding-bottom: 0px;padding-top: 0px;"><img id="images" style="border-bottom-left-radius: 10px; border-top-left-radius: 10px;" class="" width="110" height="150"> </div><div style="width: 100%;text-align: center;"><div id="story" class="ex3"></div></div></li></ul></div></div></a></li></div><div id="category" class="block block-strong" style="padding-bottom: 4px;padding-top: 4px;padding-left: 5px;padding-right: 5px;margin: 3px;"></div><div class="card"><li style="display: inherit;"><a class=""><div class="card-content"><div class="list media-list no-ios-edges" style="height: 30px;"></div></div></a></li></div><div class="block-header"><div class="segmented segmented-strong"><a href="#tab-f7" class="button tab-link">التعليقات</a><a href="#tab-md" class="button tab-link tab-link-active">الفصول</a></div></div><div class="block block-strong tabs"><div id="tab-f7" class="tab"><div class="row"></div></div><div id="tab-md" class="tab tab-active"><div class="row"></div></div></div></div></div></div>'
+}
